@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="lat">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather api</title>
+</head>
+
+<body onload="startTime()">
+    <div class="conteiner">
+        <div class="input">
+            <input type="text" class="inputValue" placeholder="Search by city name">
+            <button type="submit" value="submit" class="button">Search</button>
+
+        </div>
+
+        <header>
+
+            <table>
+                <tr>
+                    <td>
+                        <p>Location:</p>
+                    </td>
+                    <td>
+                        <h1 class="name"></h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Main:</p>
+                    </td>
+                    <td>
+                        <p class="desc"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Temperature:</p>
+                    </td>
+                    <td>
+                        <p class="temp"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Min/ max tempreture:</p>
+                    </td>
+                    <td>
+                        <p class="minmax"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Feels:</p>
+                    </td>
+                    <td>
+                        <p class="feels"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Humidity:</p>
+                    </td>
+                    <td>
+                        <p class="humidity"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>wind speed:</p>
+                    </td>
+                    <td>
+                        <p class="wind"></p>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <div class="clock">
+            <p id="time"></p>
+        </div>
+
+        <div class="background">
+            <div class="weimage" id="weimage"><h4>Place for image!!</h4> </div>
+        </div>
+
+
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
