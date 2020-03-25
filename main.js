@@ -21,7 +21,7 @@ button.addEventListener('click', function () {
             let feelValue = data['main']['feels_like'];
             let humidityValue = data['main']['humidity'];
             let descValue = data['weather'][0]['description'];
-            let speedValue = data['wind'];
+            let speedValue = data['wind']['speed'];
             let minValue = data['main']['temp_min'];
             let maxValue = data['main']['temp_max'];
             let imageValue = data['weather']['icon'];
@@ -29,12 +29,12 @@ button.addEventListener('click', function () {
 
 
             name.innerHTML = nameValue;
-            temp.innerHTML = tempValue + " ° C";
+            temp.innerHTML = tempValue + " °C";
             desc.innerHTML = descValue;
-            feel.innerHTML = feelValue + "°C";
-            humi.innerHTML = humidityValue + "%";
-            wind.innerHTNL = speedValue + "m/s";
-            aver.innerHTML = minValue + " " + "..." + " " + maxValue + "°C";
+            feel.innerHTML = feelValue + " °C";
+            humi.innerHTML = humidityValue + " %";
+            wind.innerHTNL = speedValue + " m/s";
+            aver.innerHTML = minValue + " " + "..." + " " + maxValue + " °C";
             image.innerHTML = imageValue;
         })
         .catch(err => alert("Nepareizs pilsetas nosaukums!"));
