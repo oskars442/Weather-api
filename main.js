@@ -7,7 +7,7 @@ const feel = document.querySelector('.feels');
 const wind = document.querySelector('.wind');
 const humi = document.querySelector('.humidity');
 const aver = document.querySelector('.minmax');
-const image = document.getElementById('weImage')
+const image = document.querySelector('.weimage');
 
 
 button.addEventListener('click', function () {
@@ -15,15 +15,16 @@ button.addEventListener('click', function () {
         .then(response => response.json())
         .then(data => {
 
-            
+
             let nameValue = data['name'];
             let tempValue = data['main']['temp'];
             let feelValue = data['main']['feels_like'];
             let humidityValue = data['main']['humidity'];
             let descValue = data['weather'][0]['description'];
-            let windValue = data['wind'][0];
+            let speedValue = data['wind'];
             let minValue = data['main']['temp_min'];
             let maxValue = data['main']['temp_max'];
+            let imageValue = data['weather']['icon'];
 
 
 
@@ -32,8 +33,9 @@ button.addEventListener('click', function () {
             desc.innerHTML = descValue;
             feel.innerHTML = feelValue + "°C";
             humi.innerHTML = humidityValue + "%";
-            wind.innerHTNL = windValue;
+            wind.innerHTNL = speedValue + "m/s";
             aver.innerHTML = minValue + " " + "..." + " " + maxValue + "°C";
+            image.innerHTML = imageValue;
         })
         .catch(err => alert("Nepareizs pilsetas nosaukums!"));
 });
@@ -63,4 +65,3 @@ function checkTime(i) {
     return i;
 };
 // Clock end
-
